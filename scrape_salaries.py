@@ -36,5 +36,5 @@ with open("salaries.csv", "w", encoding="utf8") as o:
 
 
 		if company_elem and salary_amount and entries_amount:
-			new_row = ",".join([company_elem.text, f"{salary_amount:.0f}", entries_amount])
+			new_row = ",".join([f'"{company_elem.text}"', f"{salary_amount:.0f}", entries_amount])
 			o.write(new_row + "\n")
